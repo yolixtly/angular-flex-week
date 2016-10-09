@@ -3,13 +3,13 @@ body {
 	margin: 0 auto;
 	width: 80%;
 	text-align: center;
-	border: #FCE4EC solid 1px;
+	// border: #FCE4EC solid 1px;
 }
 ul {
 	list-style: none;
 	text-align: left;
 	width: 50%;
-	border: #FCE4EC solid 1px;
+	// border: #FCE4EC solid 1px;
 	margin: 0 auto;
 }
 .done-true {

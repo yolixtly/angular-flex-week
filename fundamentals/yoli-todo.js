@@ -16,7 +16,6 @@ app.controller('TodoCtrl', [function(){
  		 { "text": "Add Node.js to this app", "done": false }
  	];
 
- 	// td.reminding = function(){}
  	td.reminding = function(){
  		var count = 0; 
  		for(var i = 0; i < td.todos.length; i++){
@@ -36,15 +35,13 @@ app.controller('TodoCtrl', [function(){
  		//we make a shallow copy of the current state
  		var oldTodos = td.todos;
  		//we reset the state to empty 
- 		td.todos = []
+ 		td.todos = [];
  		//ignore checked elements from the view, 
  		//and only show the todos.done = false
  		angular.forEach(oldTodos, function(item){
  			if(!item.done){
  				td.todos.push(item);
- 			};
- 		});
- 		
- 		
+ 			}
+ 		});	
  	};
 }]);

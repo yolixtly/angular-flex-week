@@ -26,4 +26,9 @@ app.controller('TodoCtrl', [function(){
  		}
  		return count; 
  	};
+
+ 	td.addTodo = function(){
+ 		td.todos.push({ text: td.newTask, done: false });
+ 		td.newTask = "";
+ 	};
 }]);

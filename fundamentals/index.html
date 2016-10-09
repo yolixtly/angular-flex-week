@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="yoliTodoApp">
-<head>
-  <meta charset="UTF-8">
-  <title>Yolix's TODO</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="./yoli-todo.css">  
-</head>
-<body ng-controller="HelloCtrl as hi">
-  <h1>List of Todos... </h1>
-  {{ hi.sayHi }}
+  <head>
+    <meta charset="UTF-8">
+    <title>Yolix's TODO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./yoli-todo.css">
+  </head>
+  <body>
+    <div ng-controller="HelloCtrl as hi">
+      <h1>List of Todos... </h1>
+      {{ hi.sayHi }}
+    </div>
+    <div ng-controller="TodoCtrl as list">
+      <h3>
+      {{ list.reminding() }} of
+      {{ list.todos.length }} reminding
+      </h3>
+      <hr>
+      <ul>
+      <li ng-repeat="task in list.todos">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="task.done">
+          <span class="done-{{ task.done }}">{{ task.text }}</span>
+        </label>
+      </li>
+      </ul>
+    </div>
+
+    
+  </div>
   <script src="./yoli-todo.js"></script>
 </body>
 </html>
-
-
-
-
-
 <!-- <html ng-app="todoApp">
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="todo.js"></script>
-    <link rel="stylesheet" href="todo.css">
-  </head>
-  <body>
-    <h2>Todo</h2>
-    <div ng-controller="TodoListController as todoList">
-      <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
-      [ <a href="" ng-click="todoList.archive()">archive</a> ]
-      <ul class="unstyled">
-        <li ng-repeat="todo in todoList.todos">
-          <label class="checkbox">
-            <input type="checkbox" ng-model="todo.done">
-            <span class="done-{{todo.done}}">{{todo.text}}</span>
-          </label>
-        </li>
-      </ul>
-      <form ng-submit="todoList.addTodo()">
-        <input type="text" ng-model="todoList.todoText"  size="30"
-               placeholder="add new todo here">
-        <input class="btn-primary" type="submit" value="add">
-      </form>
-    </div>
-  </body>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="todo.js"></script>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <h2>Todo</h2>
+  <div ng-controller="TodoListController as todoList">
+    <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+    [ <a href="" ng-click="todoList.archive()">archive</a> ]
+    <ul class="unstyled">
+      <li ng-repeat="todo in todoList.todos">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </label>
+      </li>
+    </ul>
+    <form ng-submit="todoList.addTodo()">
+      <input type="text" ng-model="todoList.todoText"  size="30"
+      placeholder="add new todo here">
+      <input class="btn-primary" type="submit" value="add">
+    </form>
+  </div>
+</body>
 </html>
-
-
-
- -->
+-->

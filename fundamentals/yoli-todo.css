@@ -12,3 +12,7 @@ ul {
 	border: #FCE4EC solid 1px;
 	margin: 0 auto;
 }
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}

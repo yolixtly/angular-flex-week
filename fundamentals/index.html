@@ -18,6 +18,8 @@
       {{ list.todos.length }} reminding
       </h3>
       <hr>
+        <a ng-click="list.updateList()">...be happy...</a>
+      <hr>
       <ul>
       <li ng-repeat="task in list.todos">
         <label class="checkbox">

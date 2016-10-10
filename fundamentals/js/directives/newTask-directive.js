@@ -12,6 +12,7 @@ app.directive('appTask', function(){
 				console.log("removed item");
 				// element.remove();
 			});
+			console.log("removed item");
 		}
 	};
 });

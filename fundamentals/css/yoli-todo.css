@@ -1,8 +1,10 @@
 body {
-	background-color: #ce93d8;
+	background-color: #5a4a5d
+	;
 	margin: 0 auto;
 	width: 80%;
 	text-align: center;
+	color: #6deeff;
 	// border: #FCE4EC solid 1px;
 }
 ul {

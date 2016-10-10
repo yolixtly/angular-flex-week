@@ -18,28 +18,25 @@
       {{ list.todos.length }} reminding
       </h3>
       <hr>
-        <a ng-click="list.updateList()">...be happy...</a>
+      <a ng-click="list.updateList()">...be happy...</a>
+      <hr>
+      <form ng-submit="list.addTodo()">
+        <input type="text" ng-model="list.newTask">
+        <input type="submit" class="btn-primary" value="add">
+      </form>
       <hr>
       <ul>
-      <li ng-repeat="task in list.todos">
-        <label class="checkbox">
-          <input type="checkbox" ng-model="task.done">
-          <span class="done-{{ task.done }}">{{ task.text }}</span>
-        </label>
-      </li>
+        <li ng-repeat="task in list.todos">
+          <app-task task="task">
+        </li>
       </ul>
-      <form ng-submit="list.addTodo()">
-        <input type="text" ng-model="list.newTask"> 
-        <input type="submit" class="btn-primary" value="add">
-       </form>
-    </div> 
+    </div>
   </div>
-   <!-- Modules -->
+  <!-- Modules -->
   
-   <!-- Controllers -->
-
-<script src="./js/controllers/yoli-todo.js"></script>
-    <!-- Directives -->
-
+  <!-- Controllers -->
+  <script src="./js/controllers/yoli-todo.js"></script>
+  <!-- Directives -->
+  <script src="./js/directives/newTask-directive.js"></script>
 </body>
 </html>

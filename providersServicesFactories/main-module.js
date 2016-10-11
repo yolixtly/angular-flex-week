@@ -7,13 +7,20 @@ var app = angular.module("myModule", []);
     stored value
   - Requires to assign the value to pass, to a $get method
   - it allows you configurations
+
+  - you can add aditional function to it. you can access them during the config face
  */
-// app.provider("myProvider", function(){
-//     this.$get = function(){
-//     console.log("myProvider.$get() called");
-//     return "my Value";
-//   };
-// });
+app.provider("myProvider", function(){
+    this.value = "my configurable value";
+
+    this.setValue = function(newValue){
+        this.value = newValue;
+    };
+    this.$get = function(){
+    console.log("changing a value");
+    return this.value;
+  };
+});
 
 /*
  Factory:
@@ -30,25 +37,42 @@ var app = angular.module("myModule", []);
  //  };
  // }
 
+function Person(name){
+  this.name = name;
+}
+
+app.factory("myFactory", function(){
+  console.log("factory function called");
+  return new Person("John");
+});
 /*
  Services: 
   - Out of the 3 Services require less code 
   - Although you can do the same with all 
   - A service only returns specific data, yes like an object and also lets you instanciate it.
   - factories take care of all of the data request handling.
+  - we cannot pass Constructor objects to services 
 
  */ 
 
-app.service("myService", function(){
-    console.log("myService function is called once");
-    return "service data here";
+// app.service("myProvider", function(){
+//     console.log("myProvider function is called once");
+//     return "service data here";
+// });
+
+app.controller("FirstController", function(myFactory){
+  console.log("myFactory: " + myFactory.name);
 });
 
-app.controller("FirstController", function(myService){
-  console.log("myService data is called");
+app.controller("SecondController", function(myFactory){
+  console.log("myFactory: " + myFactory.name);
 });
 
-app.controller("SecondController", function(myService){
-  console.log("myService data is called");
+//Configuring the provider (config Face)
+//we are setting argument as myProviderProvider to get the entire provider not only the returned value
+
+app.config(function(myProviderProvider){
+ myProviderProvider.setValue('my new Configured value');
 });
+
 

@@ -29,6 +29,9 @@ app.provider("myProvider", function(){
   - like in an http request, what we return is the entire data or Object 
         -that is the key difference Factory vs Service 
   - factories return any kind of value
+  - Useful cases: 
+    -when we make a calculation
+    -when we call data from another API
  */
 
  // function myObject(){
@@ -43,6 +46,7 @@ function Person(name){
 
 app.factory("myFactory", function(){
   console.log("factory function called");
+  //this can only be done with factories
   return new Person("John");
 });
 /*
@@ -71,8 +75,8 @@ app.controller("SecondController", function(myFactory){
 //Configuring the provider (config Face)
 //we are setting argument as myProviderProvider to get the entire provider not only the returned value
 
-app.config(function(myProviderProvider){
- myProviderProvider.setValue('my new Configured value');
-});
+// app.config(function(myProviderProvider){
+//  myProviderProvider.setValue('my new Configured value');
+// });
 
 

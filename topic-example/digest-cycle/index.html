@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>Understanding Digest Cycle</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="container">
+   <h1>Digest Cycle</h1>
+<div ng-controller="MyCtrl1">
+<hr>
+<h4>SetTimeout</h4>
+  <p>{{ rootMessage }}</p>
+
+  <p>{{ childMessage }}</p>
+</div>
+
+
+  <!-- Main Module -->
+  <script src="./app.js"></script>
+
+  <!-- Controllers -->
+  <script src="./applyDigest.js"></script>
+
+  <!-- Directives -->
+</body>
+</html>

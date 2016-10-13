@@ -4,8 +4,7 @@ app.directive('appTask', function(){
 		scope: {
 			task: '='
 		},
-		templateUrl:
-		'js/directives/newTask-directive.html',
+		templateUrl: 'js/directives/newTask-directive.html',
 		//#TODO: make this work with ng-click
 		removeItem: function(scope, element, attrs) {
 			element.bind('click', function(){

@@ -2,20 +2,25 @@ angular.module('myApp').
 
 config(['$routeProvider', function($routeProvider){
 	$routeProvider.
+	when('/', {
+		templateUrl: './views/data-binding.html',
+		controller: 'DataBindingCtrl',
+		controllerAs: 'vm'
+	}).
 	when('/setTimeoutVanilla', {
-		templateUrl: './digestCycle.html',
+		templateUrl: './views/digestCycle.html',
 		controller: 'MyCtrl1'
 	}).
 	when('/setTimeoutDigest', {
-		templateUrl: './digestCycle.html',
+		templateUrl: './views/digestCycle.html',
 		controller: 'MyCtrl2'
 	}).
 	when('/setTimeoutApply', {
-		templateUrl: './digestCycle.html',
+		templateUrl: './views/digestCycle.html',
 		controller: 'MyCtrl3'
 	}).
 	when('/setTimeoutService', {
-		templateUrl: './digestCycle.html',
+		templateUrl: './views/digestCycle.html',
 		controller: 'MyCtrl4'
 	}).
 	otherwise({

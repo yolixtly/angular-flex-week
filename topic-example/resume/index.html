@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Understanding Digest Cycle</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="container" ng-cloak>
+        <navigation-bar>
+            <img src="./assets/logo.jpg" alt="" />
+        </navigation-bar>
+        <div ng-view></div>
+        <!--Scripts-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+        
+        <!-- Main Module -->
+        <script src="./app.js"></script>
+        <!-- Main Module Config-->
+        <script src="app.config.js"></script>
+        <!-- Controllers -->
+        <script src="./controllers/data-binding-controller.js"></script>
+        <script src="./controllers/setTimeout-vanillaJS-controller.js"></script>
+        <script src="./controllers/setTimeout-digest-controller.js"></script>
+        <script src="./controllers/setTimeout-apply-controller.js"></script>
+        <script src="./controllers/setTimeout-service-controller.js"></script>
+        <script src="./controllers/topics-controller.js"></script>
+        <!-- Directives -->
+        <script src="./directives/nav-bar-directive.js"></script>
+    </body>
+</html>

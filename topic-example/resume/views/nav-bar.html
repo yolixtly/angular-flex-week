@@ -1,0 +1,15 @@
+<nav class="nav nav-tabs">
+    <div ng-transclude class="logo"></div>
+    <div class="container-fluid">
+        <h1 class="navbar-header">
+        {{ appTitle }}
+        </h1>
+    </div>
+    <ul class="list-inline">
+        <li ng-repeat="topic in topics">
+            <a href="#/{{ topic.route }}">
+                <h3>{{ topic.title }}</h3>
+            </a>
+        </li>
+    </ul>
+</nav>

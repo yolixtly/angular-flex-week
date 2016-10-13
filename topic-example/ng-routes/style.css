@@ -1,0 +1,9 @@
+ul {
+	list-style: none;
+	display: inline-block;
+}
+li:hover {
+	background-color: lightgreen;
+	border-radius: 15px 15px 0 0;
+	font-color: purple;
+}

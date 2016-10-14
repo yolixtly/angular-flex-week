@@ -4,9 +4,19 @@ describe('MyCtrl3', function(){
 	it('should create a property of title', inject(function($controller){
 		var scope = {};
 		var ctrl = $controller('MyCtrl3', {$scope: scope});
-
 		expect(scope.title).toBe('$apply');
-	}))
+		expect(scope.childMessage).toBe('Initial child hello');
+
+	}));
+	
+	// it('should create a property of title', inject(function($controller, _$rootScope_){
+	// 	var $rootScope = _$rootScope_;
+	// 	var $scope = _$rootScope_.$new();
+	// 	$controller('MyCtrl3', {
+	// 		$rootScope: $rootScope,
+	// 		$scope: scope});
+	// 	expect(scope.title).toBe('$apply');
+	// }));
 
 });
 

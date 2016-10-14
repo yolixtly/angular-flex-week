@@ -5,6 +5,6 @@ directive('navigationBar', function() {
         scope: {},
         transclude: true,
         templateUrl: './views/nav-bar.html',
-        controller: 'Topics' //only pass the name
+        controller: 'TopicsCtrl' //only pass the name
     };
 });

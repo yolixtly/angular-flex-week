@@ -2,21 +2,47 @@ ul {
 	list-style: none;
 	display: inline-block;
 }
+
 li {
 	padding: 0.5em !important;
 }
+
 li:hover {
-	background-color: lightgreen;
+	background-color: rgba(243, 136, 172, 0.38);
 	border-radius: 15px 15px 0 0;
-	font-color: purple;
 }
+
+a {
+	color: chocolate;
+	
+}
+
+a:hover {
+	color: purple;
+	text-decoration: none;
+}
+
 input {
 	width: 50%;
 	font-size: 1.5em;
 }
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+
 .logo {
-	width:
+	width: 7em;
+}
+
+navigation-bar {
+	color: purple;
+	margin: 0 auto;
+    text-align: center;
+    background-color: cyan;
+}
+
+.center-me {
+ 	margin: 0 auto;
+	text-align: center;
 }

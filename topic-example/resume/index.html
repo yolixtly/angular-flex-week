@@ -7,14 +7,20 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body class="container" ng-cloak>
+
+
         <navigation-bar>
-            <img src="./assets/logo.jpg" alt="" />
+            <img src="./assets/logo.jpg" class="logo"/>
         </navigation-bar>
-        <div ng-view></div>
+        
+        <section>
+            <div ng-view></div>
+        </section>
+
+
         <!--Scripts-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
-        
         <!-- Main Module -->
         <script src="./app.js"></script>
         <!-- Main Module Config-->

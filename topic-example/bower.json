@@ -1,0 +1,21 @@
+{
+  "name": "topic-example",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "yolixtly <yolixtly_13@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/yolixtly/angular-flex-week",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}

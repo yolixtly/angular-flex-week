@@ -1,17 +1,6 @@
-angular.module('myApp').
-controller('Topics', ['$scope', function($scope) {
+app.controller('Topics', ['$scope', 'topicsFactory', function($scope, topicsFactory) {
     $scope.appTitle = 'FlexWeek';
-    $scope.topics = [{
-        route: 'setTimeoutVanilla',
-        title: 'VanillaJS'
-    }, {
-        route: 'setTimeoutDigest',
-        title: '$digest'
-    }, {
-        route: 'setTimeoutApply',
-        title: '$apply'
-    }, {
-        route: 'setTimeoutService',
-        title: '$setTimeout'
-    }, ];
-}]);
+    topicsFactory.then(function(api){
+        $scope.topics = api.data;
+    });
+}]);    

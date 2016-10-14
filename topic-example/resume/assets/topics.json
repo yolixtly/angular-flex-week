@@ -1,0 +1,7 @@
+{
+    "0":{"route": "setTimeoutVanilla", "title": "VanillaJS"}, 
+    "1":{"route": "setTimeoutDigest","title": "$digest"},
+    "2":{"route": "setTimeoutApply","title": "$apply"},
+    "3":{"route": "setTimeoutService","title": "$setTimeout"}
+}
+

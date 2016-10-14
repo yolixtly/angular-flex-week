@@ -1,5 +1,4 @@
-angular.module('myApp').
-controller('MyCtrl4', ['$rootScope','$scope', '$timeout', function($rootScope, $scope, $timeout){
+app.controller('MyCtrl4', ['$rootScope','$scope', '$timeout', function($rootScope, $scope, $timeout){
 	$scope.title = "$timeout Service";
 	$rootScope.rootMessage = "Initial Global Hello";
 	$scope.childMessage = 'Initial child hello';

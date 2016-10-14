@@ -1,5 +1,4 @@
-angular.module('myApp').
-controller('MyCtrl3', ['$rootScope', '$scope', '$timeout', function($rootScope, $scope, $timeout) {
+app.controller('MyCtrl3', ['$rootScope', '$scope', '$timeout', function($rootScope, $scope, $timeout) {
 	$scope.title = "$apply";
     $rootScope.rootMessage = "Initial Global Hello";
     $scope.childMessage = 'Initial child hello';
